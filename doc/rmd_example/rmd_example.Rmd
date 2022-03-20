@@ -4,21 +4,17 @@ author: "Tiffany Timbers & Jordan Bourak"
 output:
   bookdown::html_document2:
     toc: true
-    #base_format: rticles::jss_article
   bookdown::pdf_document2:
     toc: true
-    #base_format: rticles::jss_article
 bibliography: references.bib
 nocite: '@*'
-  
 ---
 
-```{r, include = FALSE}
+```{r, include=FALSE}
 library(tidyverse)
 ```
 
 # Aim
-
 
 This project explores the historical population of horses in Canada between 1906 and 1972 for each province.
 
@@ -32,7 +28,7 @@ The R programming language (R Core Team, 2019) and the following R packages were
 
 # Results
 
-```{r horse_pops, fig.cap = "Horse populations for all provinces in Canada from 1906 - 1972", echo = FALSE, out.width = "150%"}
+```{r horse_pops, fig.cap= "Horse populations for all provinces in Canada from 1906 - 1972", out.width="150%", echo=FALSE}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 ```
 
@@ -40,7 +36,7 @@ We can see from Figure \@ref(fig:horse_pops) that Ontario, Saskatchewan and Albe
 
 Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations here:
 
-```{r horses_table, echo = FALSE, show_col_types = FALSE}
+```{r horses_table, include=FALSE, show_col_types = FALSE}
 horses_sd_table <- read_csv("../../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
 knitr::kable(horses_sd_table)
@@ -52,11 +48,10 @@ $$s = sqrt( sum_{i = 1}^n(x_i - \bar{x}) / (n-1))$$
 
 Additionally, note that in Table \@ref(tab:horses_table) we consider the sample standard deviation of the number of horses during the same time span as Figure \@ref(fig:horse_pops).
 
-```{r horse_pop_sd, fig.cap = "Horse populations for the province with the largest standard deviation", echo = FALSE, out.width = "50%"}
+```{r horse_pop_sd, fig.cap = "Horse populations for the province with the largest standard deviation", out.width="50%", echo=FALSE}
 knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 ```
 
 In Figure \@ref(fig:horse_pop_sd) we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
-

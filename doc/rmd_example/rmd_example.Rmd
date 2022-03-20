@@ -36,7 +36,7 @@ We can see from Figure \@ref(fig:horse_pops) that Ontario, Saskatchewan and Albe
 
 Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations here:
 
-```{r horses_table, include=FALSE, show_col_types = FALSE}
+```{r horses_table, include=FALSE, message = FALSE}
 horses_sd_table <- read_csv("../../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
 knitr::kable(horses_sd_table)

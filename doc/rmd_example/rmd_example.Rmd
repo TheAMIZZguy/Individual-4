@@ -9,6 +9,7 @@ output:
     toc: true
     base_format: rticles::jss_article
 bibliography: references.bib
+nocite: '@*'
   
 ---
 
@@ -31,7 +32,7 @@ The R programming language (R Core Team, 2019) and the following R packages were
 
 # Results
 
-```{r horse_pops, fig.cap = "Horse populations for all provinces in Canada from 1906 - 1972", echo = FALSE}
+```{r horse_pops, fig.cap = "Horse populations for all provinces in Canada from 1906 - 1972", echo = FALSE, out.width = 150%}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 ```
 
@@ -51,11 +52,11 @@ $$s = sqrt( sum_{i = 1}^n(x_i - \bar{x}) / (n-1))$$
 
 Additionally, note that in Table \@ref(tab:horses_table) we consider the sample standard deviation of the number of horses during the same time span as Figure \@ref(fig:horse_pops).
 
-```{r horse_pop_sd, fig.cap = "Horse populations for the province with the largest standard deviation"}
+```{r horse_pop_sd, fig.cap = "Horse populations for the province with the largest standard deviation", echo = FALSE, out.width = "50%"}
 knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 ```
 
-In Figure \@ref(fig:horse_pop_sd) we zoom in and look at the province of `r `, which had the largest spread of values in terms of standard deviation.
+In Figure \@ref(fig:horse_pop_sd) we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
 

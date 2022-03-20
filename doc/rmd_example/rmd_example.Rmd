@@ -4,10 +4,10 @@ author: "Tiffany Timbers & Jordan Bourak"
 output:
   bookdown::html_document2:
     toc: true
-    base_format: rticles::jss_article
+    #base_format: rticles::jss_article
   bookdown::pdf_document2:
     toc: true
-    base_format: rticles::jss_article
+    #base_format: rticles::jss_article
 bibliography: references.bib
 nocite: '@*'
   
@@ -32,7 +32,7 @@ The R programming language (R Core Team, 2019) and the following R packages were
 
 # Results
 
-```{r horse_pops, fig.cap = "Horse populations for all provinces in Canada from 1906 - 1972", echo = FALSE, out.width = 150%}
+```{r horse_pops, fig.cap = "Horse populations for all provinces in Canada from 1906 - 1972", echo = FALSE, out.width = "150%"}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 ```
 
